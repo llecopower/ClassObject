@@ -13,7 +13,7 @@ namespace ClassObject
     public partial class FormStudent : Form
     {
 
-        private Student oStudent = new Student();
+        public Student oStudent = new Student();
 
        
         public FormStudent()
@@ -24,6 +24,8 @@ namespace ClassObject
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+
+
             //store data entered at textboxed in the Object oStudent
             oStudent.StudentId = Convert.ToInt32(textBoxStudentId.Text);
             oStudent.FirstName = textBoxFirstName.Text;
@@ -31,12 +33,12 @@ namespace ClassObject
             oStudent.PhoneNumber = textBoxPhoneNumber.Text;
             oStudent.EmailAddress = textBoxEmail.Text;
 
-
             listBoxStudentId.Items.Add(oStudent.StudentId);
             listBoxFirstName.Items.Add(oStudent.FirstName);
             listBoxLastName.Items.Add(oStudent.LastName);
             listBoxPhoneNumber.Items.Add(oStudent.PhoneNumber);
             listBoxEmail.Items.Add(oStudent.EmailAddress);
+
 
             textBoxStudentId.Clear();
             textBoxFirstName.Clear();
@@ -45,7 +47,18 @@ namespace ClassObject
             textBoxEmail.Clear();
             textBoxStudentId.Focus();
 
+           // textBoxFirstName.Text = "";
+
+
             buttonExit.Enabled = true;
+
+
+
+
+         
+
+
+                
 
 
         }
